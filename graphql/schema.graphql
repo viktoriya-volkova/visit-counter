@@ -1,0 +1,10 @@
+type Query {
+    visit (domain : String) : Visit
+}
+
+type Visit {
+    domain: String
+    page: String
+    user: String
+    time: String
+}

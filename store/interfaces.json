@@ -1,0 +1,8 @@
+{
+  "visit-counter": {
+    "component": "VisitCounter"
+  },
+  "visit-counter.title": {
+    "component": "Title"
+  }
+}

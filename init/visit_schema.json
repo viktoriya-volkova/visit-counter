@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "page": { "type": "string" },
+    "domain": { "type": "string" },
+    "user": { "type": "string" },
+    "time": { "type": "string" }
+  },
+  "v-indexed": [ "page", "time" ],
+  "v-default-fields": [ "page", "user", "time" ]
+}

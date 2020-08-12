@@ -1,0 +1,5 @@
+query storeVisits($domain: String){
+    visit(domain: $domain) {
+        page
+    }
+}
