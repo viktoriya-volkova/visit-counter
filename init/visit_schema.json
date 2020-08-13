@@ -5,6 +5,6 @@
     "user": { "type": "string" },
     "time": { "type": "string" }
   },
-  "v-indexed": [ "page", "time" ],
+  "v-indexed": [ "page", "time", "domain" ],
   "v-default-fields": [ "page", "user", "time" ]
 }

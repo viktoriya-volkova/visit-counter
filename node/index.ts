@@ -2,6 +2,7 @@ import {ClientsConfig, LRUCache, Service, ServiceContext} from '@vtex/api'
 
 import {Clients} from './clients'
 import {visit} from "./resolvers/storeVisit";
+import {newVisit} from "./resolvers/newVisit";
 
 const TIMEOUT_MS = 5000
 
@@ -29,6 +30,9 @@ export default new Service({
     clients,
     graphql: {
         resolvers: {
+            Mutation: {
+                newVisit
+            },
             Query: {
                 visit,
             },

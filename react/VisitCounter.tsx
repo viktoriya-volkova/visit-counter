@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import {useCssHandles} from "vtex.css-handles"
-import {useQuery} from "@apollo/react-hooks";
+import {useMutation, useQuery} from "@apollo/react-hooks";
 import storeVisits from "./graphql/storeVisits.graphql"
+import newVisit from "./graphql/newVisit.graphql"
 
 const CSS_HANDLES = ["VisitCounter"]
 
@@ -36,6 +37,16 @@ const VisitCounter: StorefrontFunctionComponent = (props) => {
         useEffect(() => {
             console.log(props)
             console.log(data)
+            useMutation(newVisit, {
+                variables: {
+                    visit: {
+                        user: "0:b8bc18c0-d8b0-11ea-839a-290f57824a88",
+                        domain: "vvolkova--zaelab.myvtex.com",
+                        page: "https://vvolkova--zaelab.myvtex.com/bosch-coffee-grinder/p",
+                        time: "2020-08-13T15:25:28+00:00"
+                    }
+                }
+            })
             // saveSiteVisit(ctx)
             //setSiteVisitsCount(data?.length + 1)
         }, []);

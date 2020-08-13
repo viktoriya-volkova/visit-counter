@@ -8,7 +8,7 @@ export const visit = async (
     schema: 'v1',
     where: `domain=${domain}`,
     pagination: {
-        page: 0,
-        pageSize: 1
+        page: 1,
+        pageSize: 10
     }
 })

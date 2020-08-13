@@ -8,3 +8,14 @@ type Visit {
     user: String
     time: String
 }
+
+input VisitInput {
+    domain: String
+    page: String
+    user: String
+    time: String
+}
+
+type Mutation {
+    newVisit(visit: VisitInput!): Visit
+}

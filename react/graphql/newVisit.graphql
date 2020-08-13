@@ -1,0 +1,3 @@
+mutation newVisit($visitInput: VisitInput){
+    newVisit(visit: $visitInput)
+}
